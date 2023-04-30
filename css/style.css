@@ -1,0 +1,108 @@
+@import url(sidebar.css);
+@import url(modalpost.css);
+@import url(style_inscr.css);
+@import url(searchbar.css);
+
+
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+body
+{
+    background-image: linear-gradient(rgb(126, 0, 0) 0%, #ff7676 100%);
+}
+
+
+
+main
+{
+    margin: auto 320px;
+    background-color: rgb(220, 245, 227);
+    width: auto;
+}
+
+
+
+
+
+/* liste des posts */
+
+
+.contenu
+{
+    background-color: rgb(255, 220, 220);
+    padding: 0 25px;
+    min-height: 200px;
+    position: relative;
+    bottom: 0;
+}
+
+.post
+{
+    background-color: rgb(255, 243, 151);
+    padding: 5px;
+}
+
+
+
+.list_post
+{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 15px;
+    background-color: rgb(255, 220, 220);
+}
+
+
+.post_titre
+{
+    margin: 0 auto;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(217, 212, 166);
+    padding: 10px;
+}
+
+
+.post_contenu
+{
+    color: white;
+    background-color: rgb(0, 113, 36);
+    min-height: 100px;
+    padding: 10px;
+    overflow: hidden;
+}
+
+
+
+
+
+@media screen and (max-device-width: 500px)
+{
+    main
+    {
+        margin: auto 0; 
+    }
+
+
+}
+
+
+@media screen and (max-device-width: 1000px)
+{
+    main
+    {
+        margin: auto 115px;
+    }
+
+}

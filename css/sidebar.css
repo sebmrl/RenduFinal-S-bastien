@@ -1,0 +1,238 @@
+@import url("http://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+
+
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+
+
+
+
+/* Mon menu */
+
+
+/* Bouton */
+
+.home
+{
+    position: relative;
+}
+
+
+
+header
+{
+    position: fixed;
+    z-index: 99;
+    background-color: rgb(126, 0, 0);
+    height: 100vh;
+    min-width: 320px;
+    text-align: left;
+    padding-left: 30px;
+    box-sizing: border-box;
+    transition: 0.4s;
+    border-right: solid black 5px;
+}
+
+
+header.open-sidebar
+{
+    transform: translateX(0%);
+    box-shadow: 1px 0 25px 2px rgb(134, 12, 12);
+}
+
+
+
+header .hamburger
+{
+    width: 25px;
+    height: 25px;
+    background: linear-gradient(45deg, rgb(69 0 0), rgb(255 107 101));
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    right: -60px;
+    top: 25px;
+    border-radius: 11px;
+    padding: 12px;
+    border: solid 2px white;
+}
+
+
+header .hamburger .top,
+header .hamburger .mid,
+header .hamburger .bottom
+{
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    transition: 0.2s;
+}
+
+
+
+header.open-sidebar .hamburger .top
+{
+    transform: rotate(45deg);
+    position: relative;
+    top: 10px;
+    width: 44px;
+    height: 5px;
+}
+
+header.open-sidebar .hamburger .bottom
+{
+    transform: rotate(-45deg);
+    position: relative;
+    bottom: 10px;
+    width: 44px;
+    height: 5px;
+}
+
+header.open-sidebar .hamburger .mid
+{
+    opacity: 0;
+}
+
+
+
+.logo
+{
+    color: #ffffff;
+    font-size: 1.7em;
+    margin: 20px 0 50px 0;
+    gap: 15px;
+    text-transform: uppercase;
+}
+
+
+.logo img
+{
+    width: 80px;
+    height: auto;
+    border-radius: 45%;
+}
+
+
+header ul li
+{
+    margin-bottom: 10px;
+    list-style: none;
+}
+
+
+
+
+header ul li a
+{
+    color: #dcdcdc;
+    font-size: 1.1em;
+    font-weight: 500;
+    display: flex;
+    gap: 15px;
+    text-decoration: none;
+}
+
+
+/* Responsive sidebar */
+
+
+@media screen and (max-device-width: 1000px)
+{
+    header
+    {
+        min-width: 100px;
+    }
+
+
+    header ul
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    header ul,
+    .logo
+    {
+        position: relative;
+        right: 15px;
+    }
+
+
+    span
+    {
+        display: none;
+    }
+}
+
+
+
+
+
+
+@media screen and (max-device-width: 500px)
+{
+    header
+    {
+        min-width: 0%;
+        transform: translateX(-100%);
+        min-width: 200px;
+    }
+
+    
+    span
+    {
+        display: block;
+    }
+
+
+    header .hamburger
+    {
+        display: flex;
+    }
+
+
+    header ul
+    {
+        display: block;
+    }
+
+    header ul li
+    {
+        padding-bottom: 30px;
+    }
+}
+
+
+
+
+
+@media screen and (max-device-width: 380px)
+{
+    header
+    {
+        padding-left: 20px;
+    }
+
+    header .hamburger
+    {
+        right: -65px;
+    }
+}
+
+
+
+
+
+
+
+
